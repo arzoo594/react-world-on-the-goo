@@ -1,12 +1,17 @@
 import React, { useState } from "react";
 
-const Bountry = ({ bountry, handleVisitedCountries }) => {
-  // console.log(handleVisitedCountries);
+const Bountry = ({
+  bountry,
+  handleVisitedCountries,
+  handleVisitedCountriesImg,
+}) => {
+  // console.log(handleVisitedCountriesImg);
   const [visited, setVisited] = useState(false);
   const handlerVisited = () => {
     // setVisited(visited ? false : true);
     setVisited(!visited);
     handleVisitedCountries(bountry);
+    handleVisitedCountriesImg(bountry);
   };
   return (
     <div
